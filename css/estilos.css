@@ -1,0 +1,253 @@
+/* Colores
+Celesteintermedio: #82D9D9
+celesecasiclaro:#C9F2F2 
+
+*/
+/*propiedades de los iconos(ICONO HAMBURGUESA)*/
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts2/icomoon.eot?ahghsp");
+    src: url("../fonts2/icomoon.eot?ahghsp#iefix") format("embedded-opentype"),
+        url("../fonts2/icomoon.ttf") format("truetype"),
+        url("../fonts2/icomoon.woff") format("woff"),
+        url("../fonts2/icomoon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+/*Usando Pseudo-elementos*/
+/*El primero dice que todas las clases que inicien con icon- y el segundo dice que cualquier clases que en algun momento de su clase tenga tambien icon- */
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+    content: "\e9bd";
+}
+.burger-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 60%;
+    background-color: #82d98e;
+    color: aliceblue;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 3;
+    left: 10px;
+    top: 18px;
+}
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.eot?psrxju");
+    src: url("../fonts/icomoon.eot?psrxju#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?psrxju") format("truetype"),
+        url("../fonts/icomoon.woff?psrxju") format("woff"),
+        url("../fonts/icomoon.svg?psrxju#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home3:before {
+    content: "\e902";
+}
+.icon-compass2:before {
+    content: "\e94a";
+}
+.icon-heart:before {
+    content: "\e9da";
+}
+.icon-instagram:before {
+    content: "\ea92";
+}
+.icon-home3,
+.icon-compass2,
+.icon-heart,
+.icon-instagram {
+    font-size: 2.5em;
+    margin-top: 30px;
+    transition-property: color;
+    color: white;
+}
+.icon-home3,
+.icon-compass2,
+.icon-heart,
+.icon-instagram:hover {
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+/* NavBar */
+.header {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #ffffff;
+    box-shadow: -4px 25px 20px -17px rgba(0, 0, 0, 0.25);
+    border: none;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header-logo {
+    width: 65px;
+}
+.header-logo img {
+    max-width: 100%;
+    width: 100%;
+}
+.header-nav {
+    max-width: 100%;
+    align-self: center;
+}
+.header-nav input {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border: solid 0.5px rgb(170, 170, 170);
+    border-radius: 10px;
+    border-bottom: 3px #82d9d9 solid;
+}
+.header-nav input:hover {
+    border-bottom: 7px #82d9d9 solid;
+    transition: 0.1s;
+}
+.header-session {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-self: right;
+}
+.header-user {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+.header-user img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* Responsive buscador */
+@media screen and (max-width: 767px) {
+    .burger-button {
+        display: block;
+    }
+    .header {
+        grid-template-columns: 100%;
+        box-sizing: border-box;
+        height: auto;
+    }
+    .header-logo {
+        justify-self: center;
+        position: relative;
+    }
+    .header-session h3 {
+        display: none;
+    }
+    .header-session {
+        padding-right: 10px;
+        padding-top: 10px;
+        position: absolute;
+        right: 0;
+    }
+}
+/* Content */
+.content {
+    display: grid;
+    grid-template-columns: 5% 95%;
+    height: 30px;
+    background-color: antiquewhite;
+    height: 500px;
+
+    /*Navbar horizontal*/
+}
+.content-navbar {
+    background-color: #82d9d9;
+    grid-row: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-navbar-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon-configure {
+    margin-top: 300px;
+}
+
+/*movies*/
+.content-movies {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    gap: 30px;
+    grid-template: repeat(2, 350px) / repeat(3, 350px);
+    background-color: #c9f2f2;
+    justify-content: center;
+}
+.content-movies-premiere {
+    background-color: red;
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+    border-radius: 10px;
+}
+.content-movies-premiere img {
+    max-width: 100%;
+    width: 100%;
+    margin-top: -50px;
+    content: normal;
+}
+.content-movies-premiere h3 {
+    position: absolute;
+    color: #ffffff;
+}
+.content-movies-premiere p {
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(58, 55, 55, 0.5);
+    position: absolute;
+    color: white;
+    bottom: 0;
+}
